@@ -8,7 +8,7 @@
 <dependency>
     <groupId>com.al.basic.id</groupId>
     <artifactId>leaf-spring-boot-starter</artifactId>
-    <version>xxx-RELEASE</version>
+    <version>1.1.3-RELEASE</version>
 </dependency>
 ```
 ## 2、初始化配置
