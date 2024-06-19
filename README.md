@@ -48,7 +48,14 @@ INSERT INTO `leaf_alloc`(`biz_tag`,`max_id`,`step`,`description`,`update_time`) 
 ```
 这句话的意思是添加一条biz_tag叫 `order-service.t_order` 的自增id生成记录，当前从1开始递增，每次客户端取1000个数
 
-<br/>
+## 3、接口使用
+在你项目中，通过spring依赖注入LeafService就可以使用。见测试类LeafServerApplicationTests。
+```java
+@Inject
+private LeafService leafService;
+```
+
+
 
 
 
