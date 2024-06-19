@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.2.241:3306/order_service_ut?characterEncoding=UTF-8&useSSL=false
+    username: akulaku
+    password: Admin123456
+
+leaf:
+  lazyInit: true
