@@ -39,7 +39,7 @@ CREATE TABLE `leaf_alloc` (
 
 **说明：**
 biz_tag：一般是工程的${application.name }.${table_name}
-
+<br>
 
 例如支付订单表t_pay_order的id生成记录的tag为'order-service.t_order'
 ```sql
