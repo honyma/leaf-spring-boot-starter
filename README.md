@@ -40,8 +40,9 @@ CREATE TABLE `leaf_alloc` (
 **说明：**
 biz_tag：一般是工程的${application.name }.${table_name}
 <br>
+<br>
 
-例如支付订单表t_pay_order的id生成记录的tag为'order-service.t_order'
+例如支付订单表 t_pay_order 的id生成记录的tag为 'order-service.t_order'
 ```sql
 INSERT INTO `leaf_alloc`(`biz_tag`,`max_id`,`step`,`description`,`update_time`) VALUES('order-service.t_order',1,1000,'订单主表',NOW());
 ```
