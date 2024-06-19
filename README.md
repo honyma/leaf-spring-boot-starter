@@ -35,16 +35,19 @@ CREATE TABLE `leaf_alloc` (
 ) ENGINE=InnoDB;
 ```
 
-上面依赖表创建好后，并准备初始化脚本: 如对某个业务生成分布式ID，需要先添加id生成记录sql，sql带该业务类型对应ID的初始值和步长。
+上面依赖表创建好后，并准备初始化脚本: 如对某个业务生成分布式ID，需要先添加id生成记录对应的sql，sql带该业务类型对应ID的初始值和步长。
 
 **说明：**
 biz_tag：一般是工程的${application.name }.${table_name}
+
 
 例如支付订单表t_pay_order的id生成记录的tag为'order-service.t_order'
 ```sql
 INSERT INTO `leaf_alloc`(`biz_tag`,`max_id`,`step`,`description`,`update_time`) VALUES('order-service.t_order',1,1000,'订单主表',NOW());
 ```
-这句话的意思是添加一条biz_tag叫`order-service.t_order`的自增生成记录，当前从1开始递增，每次客户端取1000个数
+这句话的意思是添加一条biz_tag叫`order-service.t_order`的自增id生成记录，当前从1开始递增，每次客户端取1000个数
+
+<br/>
 
 
 
